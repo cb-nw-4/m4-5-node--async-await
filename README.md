@@ -1,4 +1,4 @@
-# Module 3 - Node day 7 - Async / Await
+# 4-5 - Node JS - Async / Await
 
 ## Setup
 
@@ -15,8 +15,8 @@ In the example from last workshop we had a Promise that compared a number to the
 const compareToTen = (num) => {
   return new Promise((resolve, reject) => {
     num > 10
-      ? resolve(num + ' is greater than 10, success!')
-      : reject(num + ' is less than 10, error!');
+      ? resolve(num + " is greater than 10, success!")
+      : reject(num + " is less than 10, error!");
   });
 };
 
@@ -142,33 +142,4 @@ module.exports = { myFunction };
 
 ## Exercise 6 - The Frontend
 
-### Part 1
-
-Your server must have an endpoint `/make-me-laugh` that returns a page with a random joke.
-
-#### Option A - EJS
-
-Use `EJS` to render the page.
-
-1. Create `get` endpoint that will render `pages/joke.ejs`.
-2. Create the `views` folder, the `pages` folder and the `jokes.ejs` file.
-3. Pass the random joke directly to `jokes.ejs`.
-4. Create a `styles.css` file in the public folder.
-
-#### Option b - Static Files
-
-Use static files. _No need to create a `get` endpoint, if you use this option._
-
-1. Create a folder called `make-me-laugh` in the public folder.
-2. Create an `index.html`, a `styles.css`, and a `scripts.js` file in that folder.
-3. Write the JS needed to `fetch` the joke from `/random-joke`.
-
-### Part 2
-
-- Add a dropdown to the page that allows the user to select the joke type she/he would like to read.
-- Write the JS required to capture the user's joke choice.
-- Use `onchange` to make it dynamic.
-- Once a user selects a joke-type, a random joke should appear on the page.
-- If the user re-selects, then the joke changes.
-
-The way of doing this will vary depending on the option you chose in Part 1.
+Add a React Frontend to render the jokes to the browser.
