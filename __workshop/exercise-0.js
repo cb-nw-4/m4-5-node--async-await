@@ -10,7 +10,7 @@ const compareToTen = (num) => {
   });
 };
 
-const handleCompareToTen = async (num) => {
+const handleCompareToTen = async (num) => { 
   try {
     const result = await compareToTen(num);
     console.log(result);
