@@ -7,9 +7,9 @@ const getTronaldDumpQuote = async () => {
     headers: { accept: "application/json" },
   });
   let parsed = JSON.parse(response);
-  return parsed;
+  return parsed.value;
 };
 
-getTronaldDumpQuote();
+// getTronaldDumpQuote();
 
 module.exports = { getTronaldDumpQuote };

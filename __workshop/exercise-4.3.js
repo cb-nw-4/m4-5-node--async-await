@@ -14,6 +14,6 @@ const getGeekJoke = async () => {
   return parsed.joke
 };
 
-getGeekJoke().then((joke) => {console.log(joke)})
+// getGeekJoke().then((joke) => {console.log(joke)})
 
 module.exports = {getGeekJoke}
