@@ -6,6 +6,7 @@ const morgan = require('morgan');
 
 const { handleJoke } = require('./handlers');
 
+
 express()
   .use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -22,5 +23,11 @@ express()
   .set('view engine', 'ejs')
 
   // endpoints
+
+  .get('/joke:type', (req, res) => {
+    res.json({
+
+    })
+  })
 
   .listen(8000, () => console.log(`Listening on port 8000`));
