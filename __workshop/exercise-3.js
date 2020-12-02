@@ -2,7 +2,7 @@
 // ----------
 
 const doublesLater = (num) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
       console.log("2 second wait...");
       setTimeout(()=> resolve(2 * num), 2000)
   });
