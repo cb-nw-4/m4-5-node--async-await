@@ -2,11 +2,28 @@
 // ----------
 
 const doublesLater = (num) => {
-  // 1. waits 2 seconds (You could console a message here. It might make the 2 second wait easier ;)
-  // 2. returns the double of the num
-};
+  return new Promise((resolve, reject) => {
+    if (typeof num === 'number') {
+      const result = num * 2;
+      setTimeout(() => resolve(result), 2000); 
+    }
+    else {
+      reject('ERROR: NOT A NUMBER');
+    }
+  })  
+}
 
-// 3. handleSum function (async/await)
+const handleSum = async (num) => {
+  try {
+    const double = await doublesLater(num);
+    const doubleOfDouble = await doublesLater(double);
+    const doubleOfDoubleOfDouble = await doublesLater(doubleOfDouble);
+    return doubleOfDoubleOfDouble;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-// 4. verification
+
+//verification
 handleSum(10).then((ans) => console.log(ans));
