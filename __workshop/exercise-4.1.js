@@ -1,6 +1,22 @@
 const request = require("request-promise");
 
-// getDadJoke
+const apiObj = {
+    uri: 'https://icanhazdadjoke.com/',
+    headers: {
+        'Accept': 'application/json'
+    }
+}
 
-// 4.1
-// getDadJoke().then((data) => console.log(data));
+const getDadJoke = async () => {
+    try {
+        const response = await request(apiObj);
+        const parsedResponse = JSON.parse(response);
+        const joke = parsedResponse.joke;
+        return joke;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+//Testing
+getDadJoke().then((data) => console.log(data));
