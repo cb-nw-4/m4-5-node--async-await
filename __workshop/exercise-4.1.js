@@ -10,10 +10,12 @@ const getDadJoke = async () => {
             headers: {
                 "Accept": "application/json"
             },
+            json: true
             
         };
 
         const response = await request(options);
+
 
         return response.joke;
 
@@ -24,3 +26,6 @@ const getDadJoke = async () => {
 
 // 4.1
 getDadJoke().then((data) => console.log(data));
+
+
+module.exports = {getDadJoke}

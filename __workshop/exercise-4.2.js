@@ -11,6 +11,7 @@ const getTronaldDumpQuote = async () => {
             headers: {
                 "Accept": "application/json"
             },
+            json: true
         };
 
         const response = await request(options);
@@ -23,3 +24,7 @@ const getTronaldDumpQuote = async () => {
 };
 
 getTronaldDumpQuote().then((data) => console.log(data))
+module.exports = {getTronaldDumpQuote}
+
+
+

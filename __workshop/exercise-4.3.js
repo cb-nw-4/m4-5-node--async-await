@@ -7,12 +7,13 @@ const getGeekJoke = async () => {
 
       let options = {
         url: 'https://geek-jokes.sameerkumar.website/api?format=json',
-        method: 'GET'
+        method: 'GET',
+        json: true
     }
     
     const response = await request(options)
       
-    return response;
+    return response.joke;
 
   } catch(error){
     console.log(error)
@@ -20,3 +21,6 @@ const getGeekJoke = async () => {
 };
 
 getGeekJoke().then((data) => console.log(data))
+
+
+module.exports = {getGeekJoke}
