@@ -12,3 +12,4 @@ const getGeekJoke = async () => {
 
 getGeekJoke().then(data=>(console.log(data)));
 
+module.exports = { getGeekJoke };
