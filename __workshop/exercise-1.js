@@ -1,6 +1,7 @@
 // Exercise 1
 // ------------
 
+
 const makeAllCaps = (array) => {
   return new Promise((resolve, reject) => {
     array.every((word) => typeof word === 'string')
@@ -18,8 +19,16 @@ const sortWords = (array) => {
 };
 
 const textTransform = async (array) => {
-  // here
+  try {
+    const allCaps = await makeAllCaps(array);
+    console.log(allCaps);
+    const sortedWords = await sortWords(array);
+    console.log(sortedWords);
+  } catch {
+    console.log('Error: Something went wrong with sorting words.');
+  }
 };
 
 textTransform(['cucumber', 'tomatos', 'avocado']);
 textTransform(['cucumber', 44, true]);
+
