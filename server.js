@@ -22,5 +22,12 @@ express()
   .set('view engine', 'ejs')
 
   // endpoints
+  .get("/joke/:type", async (req, res) => {
+    const result = await handleJoke(req.params.type)
+    res.json({
+      status: 200,
+      joke: result,
+    });
+  })
 
   .listen(8000, () => console.log(`Listening on port 8000`));
