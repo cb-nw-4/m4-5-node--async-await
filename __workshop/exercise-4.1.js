@@ -24,3 +24,4 @@ console.log(err, "Error")
     }
 }
 getDadJoke().then((data) => console.log(data));
+module.exports = { getDadJoke };
