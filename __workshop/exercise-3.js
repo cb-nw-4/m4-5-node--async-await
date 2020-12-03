@@ -9,9 +9,14 @@ const doublesLater = (num) => {
 
 };
 const handleSum = async (num) => {
+  let theSum  = 0;
 try {
   const ans = await doublesLater(num);
-  console.log(ans);
+  const first = await (theSum += ans);
+const second = await (theSum += first);
+const third = await (theSum += second);
+console.log(third);
+
 }
 catch (err) {
 console.log("error")
@@ -20,7 +25,7 @@ console.log("error")
 
 
 
-handleSum(20);
+handleSum(10);
 
 
   // 1. waits 2 seconds (You could console a message here. It might make the 2 second wait easier ;)
