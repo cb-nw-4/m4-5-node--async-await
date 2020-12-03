@@ -24,8 +24,8 @@ const textTransform = async (array) => {
     console.log(allCaps);
     const sortedWords = await sortWords(array);
     console.log(sortedWords);
-  } catch {
-    console.log('Error: Something went wrong with sorting words.');
+  } catch (err) {
+    console.log(err);
   }
 };
 
