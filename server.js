@@ -28,7 +28,7 @@ express()
     console.log(typeof type);
     try{
         const newtype=await handleJoke(type);
-        res.json({
+        res.status(200).json({
           status:200,
           message:newtype
         })

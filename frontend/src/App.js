@@ -4,19 +4,19 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Joke from './Joke';
+import Joke from './Joke.js';
 
-const App= async()=> {
+const App= ()=> {
   return (
-    <>
+    <div>
       <Router>
         <Switch>
-          <Route path="/joke/:type">
+          <Route exact path='/joke/:type'>
             <Joke/>
           </Route>
         </Switch>
       </Router>
-    </>
+    </div>
   );
 };
 
