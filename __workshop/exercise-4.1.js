@@ -31,4 +31,6 @@ const getDadJoke = async () => {
 }
 
 // 4.1
-getDadJoke().then((data) => console.log(data));
+getDadJoke().then((response) => console.log(response));
+
+module.exports = { getDadJoke };

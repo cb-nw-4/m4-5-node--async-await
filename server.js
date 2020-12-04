@@ -22,5 +22,9 @@ express()
   .set('view engine', 'ejs')
 
   // endpoints
+  .get("/joke/:type", (req, res) => {
+    const type = req.params.type;
+    handleJoke(type, res);
+  })
 
   .listen(8000, () => console.log(`Listening on port 8000`));
