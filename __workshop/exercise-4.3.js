@@ -9,8 +9,8 @@ const getGeekJoke = async () => {
 }
 
 try{
-  let joke = await request(options).then((res)=>res.joke);
-  return joke;
+  let response = await request(options);
+  return response.joke;
 } catch(err){
   console.log(err);
 }
