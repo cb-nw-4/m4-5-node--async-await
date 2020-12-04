@@ -15,6 +15,7 @@ express()
     );
     next();
   })
+
   .use(morgan("dev"))
   .use(express.static("public"))
   .use(bodyParser.json())
@@ -28,7 +29,9 @@ express()
   .get("/joke/:type", async (req, res) => {
     try {
       const joke = await handleJoke(req.params.type);
+      res.send({data: joke});
       res.status(200).json({ status: 200, data: joke });
+      
     } catch (err) {
       res.status(404).json({ status: 404, err: "Joke Not Found" });
       console.log(err, "Error");
