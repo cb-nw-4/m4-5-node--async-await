@@ -8,7 +8,7 @@ const getDadJoke = async () => {
   try {
     const response = await request(requestObj);
     const jokeObj = JSON.parse(response);
-    
+
     return jokeObj.joke;
   } catch (err) {
     console.log(err);
@@ -16,3 +16,5 @@ const getDadJoke = async () => {
 }
 
 getDadJoke().then((data) => console.log(data));
+
+module.exports = { getDadJoke };
