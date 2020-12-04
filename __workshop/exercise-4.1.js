@@ -10,11 +10,12 @@ const getDadJoke= async ()=>{
     try{
         let response=await request(options);
         const parsed= JSON.parse(response);
-        return console.log(parsed.joke);
+        return parsed.joke;
     }
     catch(err){
         console.log(err);
     }
 };
 // 4.1
-getDadJoke().then((data) => console.log(data));
+//getDadJoke().then((data) => console.log(data));
+module.exports={ getDadJoke }
