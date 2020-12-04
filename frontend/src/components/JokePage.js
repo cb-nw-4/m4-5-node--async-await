@@ -35,7 +35,6 @@ const JokePage = () => {
             })
     },[])
 
-    console.log(joke);
     return (
         <>{joke && (
             <Container>
