@@ -12,10 +12,10 @@ const getTronaldDumpQuote = async () => {
 
   try{
     let joke = await request(options);
-    return joke;
+    return joke.value;
   } catch(err){
     console.log(err);
   }
 };
 
-getTronaldDumpQuote().then((res)=>console.log(res.value));
+getTronaldDumpQuote().then((res)=>console.log(res));

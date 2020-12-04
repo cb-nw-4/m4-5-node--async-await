@@ -1,7 +1,7 @@
 const request = require("request-promise");
 
 // getDadJoke
-const getDadJoke = () =>{
+const getDadJoke = async () =>{
     var options = {
         uri: 'https://icanhazdadjoke.com/',
         headers: {
@@ -10,7 +10,13 @@ const getDadJoke = () =>{
         json: true // Automatically parses the JSON string in the response
     };
 
-    return request(options).then((res)=>res.joke);
+    try {
+        let response = await request(options);
+        return response.joke;
+    } catch(err){ 
+        console.log(err);
+    }
+
 
 };
 
