@@ -39,7 +39,7 @@ const JokePage = () => {
     return (
         <>{joke && (
             <Container>
-            <Header>{`Here is a random ${type} joke to make you smile`}</Header>
+            <Header>{`Here is a random ${type} joke to make you smile 🤣`}</Header>
             <Joke>{joke}</Joke>
             </Container>
         )}
