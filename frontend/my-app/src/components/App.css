@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+}
+
+.App-img {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-img-spin 1s 5;
+}
+
+h3{
+  color: coral;
+  padding: 20px;
+  margin: 20px 50px;
+  text-align: center;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.list button{
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: #61dafb;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+
+}
+
+
+.App-Container {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+@keyframes App-img-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
