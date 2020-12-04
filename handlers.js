@@ -2,7 +2,8 @@ const { getDadJoke } = require('./__workshop/exercise-4.1');
 const { getTronaldDumpQuote } = require('./__workshop/exercise-4.2');
 const { getGeekJoke } = require('./__workshop/exercise-4.3');
 
-const handleJoke = async (type, res) => {
+const handleJoke = async (req, res) => {
+  let type = req.params.type; 
   if (type === "dad") {
     let quote = await getDadJoke();
     res.status(200).json({
