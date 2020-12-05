@@ -22,5 +22,6 @@ express()
   .set('view engine', 'ejs')
 
   // endpoints
+  .get('/joke/:type', handleJoke)
 
   .listen(8000, () => console.log(`Listening on port 8000`));
