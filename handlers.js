@@ -11,7 +11,7 @@ const handleJoke = async (req, res) => {
         res.status(200).json({ status: 200, joke: await getTronaldDumpQuote() });
     }
     else if (jokeType === 'geek') {
-        res.status(200).json({ status: 200, joke: await getTronaldDumpQuote() });
+        res.status(200).json({ status: 200, joke: await getGeekJoke() });
     }
 }
 

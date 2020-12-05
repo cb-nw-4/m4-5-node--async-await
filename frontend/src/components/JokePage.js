@@ -30,7 +30,6 @@ const JokePage = () => {
         fetch(`/joke/${type}`)
             .then((res) => res.json())
             .then((json) => {
-                console.log(json, 'json');
                 setJoke(json.joke);
             })
     },[])

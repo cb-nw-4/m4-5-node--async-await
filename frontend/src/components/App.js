@@ -11,7 +11,7 @@ function App() {
       <Route exact path='/joke/:type'>
         <JokePage />
       </Route>
-      <Route exact path='/joke'>
+      <Route exact path='/'>
         <MainPage />
       </Route>
       </Switch>
