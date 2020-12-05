@@ -18,7 +18,14 @@ const sortWords = (array) => {
 };
 
 const textTransform = async (array) => {
-  // here
+  try {
+const result = await makeAllCaps(array);
+const finalResult = await sortWords(result);
+console.log(finalResult);
+  }
+  catch(err) {
+
+  }
 };
 
 textTransform(['cucumber', 'tomatos', 'avocado']);
