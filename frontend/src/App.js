@@ -4,6 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import Home from './Home';
 import Joke from './Joke.js';
 
 const App= ()=> {
@@ -11,6 +12,10 @@ const App= ()=> {
     <div>
       <Router>
         <Switch>
+          <Route exact path='/'>
+            <Home/>
+          </Route>
+          
           <Route exact path='/joke/:type'>
             <Joke/>
           </Route>
