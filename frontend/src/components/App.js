@@ -1,24 +1,31 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import styled from "styled-components";
+import Button from "./Button";
 const App = () => {
     return (
-        <BrowserRouter>
+       
         <Wrapper>
             <Switch>
                 <Route exact path="/joke/:type">
                     <HomePage />
+                    <Button  />
                 </Route>
             </Switch>
         </Wrapper>
-        </BrowserRouter>
+     
     );
 }
 
 const Wrapper = styled.div`
-background-color:#1B5396;
+background-color:black;
 height: 100vh;
-margin: -10px;
+width:100%;
+margin:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 `
 export default App;
