@@ -40,8 +40,6 @@ const Para=styled.h1`
 const Main=styled.p`
     text-align:center;
     padding:50px;
-
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     font-size:2em;
 `;
 
