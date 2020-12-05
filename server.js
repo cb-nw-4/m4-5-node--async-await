@@ -23,4 +23,20 @@ express()
 
   // endpoints
 
+  .get('/joke/:type', async(req, res)=>{
+    const type=req.params.type;
+    console.log(typeof type);
+    try{
+        const newtype=await handleJoke(type);
+        res.status(200).json({
+          status:200,
+          message:newtype
+        })
+    }
+    catch(err){
+      console.log(err);
+    }
+    
+  })
+
   .listen(8000, () => console.log(`Listening on port 8000`));
