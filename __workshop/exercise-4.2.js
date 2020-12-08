@@ -22,3 +22,4 @@ const getTronaldDumpQuote = async () => {
 };
 
 getTronaldDumpQuote();
+module.exports = { getTronaldDumpQuote };

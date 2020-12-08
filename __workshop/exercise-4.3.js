@@ -14,3 +14,4 @@ const getGeekJoke = async () => {
 };
 
 getGeekJoke();
+module.exports = { getGeekJoke };
